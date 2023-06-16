@@ -76,7 +76,8 @@ public class Login extends JFrame implements ActionListener {
 //            int i=0;
         }
         else if(e.getSource()==signin){
-//            int j=0;
+            setVisible(false);
+            new signin().setVisible(true);
         }
         else if(e.getSource()==clear){
             cardTextField.setText("");

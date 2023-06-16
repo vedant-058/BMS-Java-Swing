@@ -1,10 +1,14 @@
 import java.sql.*;
+
 public class connection {
+//    public PreparedStatement s;
+
+    Connection c;
+    Statement s;
     public connection(){
-        connection c;
         try{
-            Class.forName(com.mysql.cj.jdbc.Driver);
-            c=DriverManager.getConnection("jdbc:mysql:///");
+            c=DriverManager.getConnection("jdbc:mysql:///bankmanagementsystem","root","VeDaNt@234");
+            s = c.createStatement();
         }
         catch (Exception e){
             System.out.println(e);
