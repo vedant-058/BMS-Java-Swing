@@ -128,6 +128,7 @@ public class signin extends JFrame implements ActionListener {
         pincode.setFont(new Font("Raleway",Font.BOLD,20));
         pincode.setBounds(100,590,200,30);
         add(pincode);
+
         pincodetextfield=new JTextField();
         pincodetextfield.setFont(new Font("Raleway",Font.BOLD,14));
         pincodetextfield.setBounds(300,590,400,30);
@@ -196,8 +197,13 @@ public class signin extends JFrame implements ActionListener {
             }
             else{
                 connection c =new connection();
-                String query= "insert into signup values('"+formno+"',  '"+name+"',  '"+fname+"',  '"+dob+"',  '"+gender+"',  '"+email+"',  '"+marital+"',  '"+address+"',  '"+city+"',  '"+state+"',  '"+pin+"');";
+                String query= "insert into signup values('"+formno+"',  '"+name+"',  '"+fname+
+                        "',  '"+dob+"',  '"+gender+
+                        "',  '"+email+"',  '"+marital+"',  '"+address+"',  '"
+                        +city+"',  '"+state+"',  '"+pin+"');";
                 c.s.executeUpdate(query);
+                setVisible(false);
+                new signin2(formno).setVisible(true);
             }
 
         }

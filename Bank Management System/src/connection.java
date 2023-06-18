@@ -1,8 +1,6 @@
 import java.sql.*;
 
 public class connection {
-//    public PreparedStatement s;
-
     Connection c;
     Statement s;
     public connection(){
