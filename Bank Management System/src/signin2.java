@@ -170,7 +170,8 @@ public class signin2 extends JFrame implements ActionListener {
                     "',  '"+occ+"',  '"+pnum+"',  '"+anum+"',  '"
                     +seniorciti+"',  '"+exeist+"');";
             c.s.executeUpdate(query);
-
+            setVisible(false);
+            new signup3(formno).setVisible(true);
 
         }
         catch (Exception e){
@@ -178,7 +179,7 @@ public class signin2 extends JFrame implements ActionListener {
         }
     }
     public static void main(String[] args) {
-        new signin2("");
+        new signin2("formno");
     }
 }
 
