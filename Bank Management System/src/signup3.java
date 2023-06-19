@@ -19,7 +19,7 @@ public class signup3 extends JFrame {
         r1=new JRadioButton("Saving Account");
         r1.setFont(new Font("Raleway",Font.BOLD,22));
         r1.setBackground(Color.white);
-        r1.setBounds(100,180,200,20);
+        r1.setBounds(100,180,250,20);
         add(r1);
 
         r2=new JRadioButton("Fixed Account");
@@ -53,12 +53,12 @@ public class signup3 extends JFrame {
 
         JLabel number =new JLabel("XXXX-XXXX-XXXX-5767");
         number.setFont(new Font("Raleway",Font.BOLD,22));
-        number.setBounds(100,300,300,20);
+        number.setBounds(330,300,300,30);
         add(number);
 
         JLabel carddetails =new JLabel("Your 16 Digit Card Number:");
         carddetails.setFont(new Font("Raleway",Font.BOLD,12));
-        carddetails.setBounds(330,330,300,30);
+        carddetails.setBounds(100,330,300,30);
         add(carddetails);
 
         JLabel pin =new JLabel("Pin: ");
@@ -68,7 +68,7 @@ public class signup3 extends JFrame {
 
         JLabel pindetails =new JLabel("Your 4 Digit Pin: ");
         pindetails.setFont(new Font("Raleway",Font.BOLD,22));
-        pindetails.setBounds(100,400,200,30);
+        pindetails.setBounds(100,400,300,30);
         add(pindetails);
 
         JLabel pinnumber =new JLabel("XXXX");
