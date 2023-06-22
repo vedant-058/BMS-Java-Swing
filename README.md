@@ -30,5 +30,12 @@ Sign page 3:
 ![image](https://github.com/vedant-058/Java-Project/assets/113187868/a527b9a5-b76f-46d5-bd62-34a382cd93ac)
 
 
+Deposit:
+![image](https://github.com/vedant-058/Java-Project/assets/113187868/65859387-6e81-487d-ae01-ab4c2e371aef)
+![image](https://github.com/vedant-058/Java-Project/assets/113187868/d6f1875d-df54-47d1-ad0e-dd5c78991157)
+
+Retrival of data and after verification deposit of amount is the respective bank account. 
+
+
 
 
