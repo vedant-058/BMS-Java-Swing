@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class Login extends JFrame implements ActionListener {
     JButton login ,signin,clear;
@@ -73,7 +74,23 @@ public class Login extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==login){
-//            int i=0;
+            connection c=new connection();
+            String cn=cardTextField.getText();
+            String pin=pinTextField.getText();
+            String query = "select * from login where CardNum = '"+cn+"' and Pin = '"+pin+"'";
+            try{
+                ResultSet rs=c.s.executeQuery(query);
+                if(rs.next()){
+                    setVisible(false);
+                    new transaction("").setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Invalid Data");
+                }
+            }
+            catch (Exception ee){
+                System.out.println(ee);
+            }
         }
         else if(e.getSource()==signin){
             setVisible(false);
