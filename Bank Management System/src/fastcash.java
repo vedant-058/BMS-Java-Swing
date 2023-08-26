@@ -25,32 +25,32 @@ public class fastcash extends JFrame implements ActionListener {
         text.setFont(new Font("System",Font.BOLD,16));
         image.add(text);
 
-        a100=new JButton("Rs 100/-");
+        a100=new JButton("Rs 100");
         a100.setBounds(170,415,150,30);
         a100.addActionListener(this);
         image.add(a100);
 
-        a500=new JButton("Rs 500/-");
+        a500=new JButton("Rs 500");
         a500.setBounds(355,415,150,30);
         a500.addActionListener(this);
         image.add(a500);
 
-        a1000=new JButton("Rs 1000/-");
+        a1000=new JButton("Rs 1000");
         a1000.setBounds(170,450,150,30);
         a1000.addActionListener(this);
         image.add(a1000);
 
-        a2500=new JButton("Rs 2500/-");
+        a2500=new JButton("Rs 2500");
         a2500.setBounds(355,450,150,30);
         a2500.addActionListener(this);
         image.add(a2500);
 
-        a5000=new JButton("Rs 5000/-");
+        a5000=new JButton("Rs 5000");
         a5000.setBounds(170,485,150,30);
         a5000.addActionListener(this);
         image.add(a5000);
 
-        a10000=new JButton("Rs 10000/-");
+        a10000=new JButton("Rs 10000");
         a10000.setBounds(355,485,150,30);
         a10000.addActionListener(this);
         image.add(a10000);
@@ -81,10 +81,10 @@ public class fastcash extends JFrame implements ActionListener {
             String amount= ((JButton)e.getSource()).getText().substring(3);
             connection c=new connection();
             try{
-                ResultSet rs=c.s.executeQuery("select * from bank where pin is ='"+pinNum+"'");
+                ResultSet rs=c.s.executeQuery("select * from bank where pin = '"+pinNum+"'");
                 int balance=0;
                 while (rs.next()){
-                    if(rs.getString("type").equals("deposit")){
+                    if(rs.getString("type").equals("Deposit")){
                         balance+=Integer.parseInt(rs.getString("amount"));
                     }
                     else {
@@ -97,7 +97,7 @@ public class fastcash extends JFrame implements ActionListener {
                 }
                 else {
                     Date date=new Date();
-                    String query="insert into bank values('"+pinNum+"', '"+date+"', 'Withdrawl','"+amount+"')";
+                    String query="insert into bank values('"+pinNum+"', '"+date+"','Withdrawl','"+amount+"')";
                     c.s.executeUpdate(query);
                     JOptionPane.showMessageDialog(null,"Rs "+ amount+" Debited Sucessfully");
                     setVisible(true);
